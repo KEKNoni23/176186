@@ -1,38 +1,26 @@
 package AA.EsercizioINGSW;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import static org.junit.Assert.assertEquals;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
+import java.util.Arrays;
+import java.util.LinkedList;
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
+import org.junit.BeforeClass;
+import org.junit.Test;
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
+public class AppTest {
+
+	private static Math math;
+
+	@BeforeClass
+	public static void prepare() {
+		math = new Math();
+	}
+
+	@Test
+	public void primeNumbersGeneretorWorks() {
+		assertEquals(new LinkedList<Integer>(), math.primeNumersGenerator(1));
+		assertEquals(Arrays.asList(2, 3, 5, 7, 11, 13, 17, 19), math.primeNumersGenerator(20));
+	}
+
 }
