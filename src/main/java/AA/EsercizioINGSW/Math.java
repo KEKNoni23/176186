@@ -12,7 +12,6 @@ public class Math {
 		for (int i = 3; i <= n; i += 2) {
 			if (isPrime(i)) {
 				primeNumbers.add(i);
-				System.out.println("QUIUUU");
 			}
 		}
 		return primeNumbers;

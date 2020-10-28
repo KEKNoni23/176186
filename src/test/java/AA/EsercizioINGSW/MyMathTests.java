@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class AppTest {
+public class MyMathTests {
 
 	private static Math math;
 
