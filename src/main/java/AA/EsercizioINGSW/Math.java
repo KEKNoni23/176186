@@ -9,10 +9,9 @@ public class Math {
 		if (n >= 2) {
 			primeNumbers.add(2);
 		}
-		for (int i = 0; i <= n; i += 2) {
+		for (int i = 3; i <= n; i += 2) {
 			if (isPrime(i)) {
 				primeNumbers.add(i);
-				System.out.println("QUI");
 			}
 		}
 		return primeNumbers;
@@ -22,7 +21,7 @@ public class Math {
 		if (number < 2) {
 			return false;
 		}
-		for (int i = 2; i * i < number; i++) {
+		for (int i = 2; i * i <= number; i++) {
 			if (number % i == 0) {
 				return false;
 			}
